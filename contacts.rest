@@ -1,0 +1,13 @@
+### Get all contacts (Local)
+GET http://localhost:3000/contacts
+
+### Get single contact (Local) - Replace ID
+GET http://localhost:3000/contacts/REPLACE_WITH_ACTUAL_ID
+
+###
+
+### Get all contacts (Production)
+GET https://your-app-name.onrender.com/contacts
+
+### Get single contact (Production) - Replace ID
+GET https://your-app-name.onrender.com/contacts/REPLACE_WITH_ACTUAL_ID
