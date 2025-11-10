@@ -11,7 +11,7 @@ const initDb = (callback) => {
   const mongoUri = process.env.MONGO_URL;
   
   if (!mongoUri) {
-    return callback(new Error('MONGO_URI not configured'));
+    return callback(new Error('MONGO_URL not configured'));
   }
 
   MongoClient.connect(mongoUri)
