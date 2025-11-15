@@ -3,6 +3,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 // GET ALL
 const getAll = async (req, res) => {
+  //#swagger.tags=['contacts']
   try {
     const result = await mongodb
       .getDatabase()
@@ -20,6 +21,7 @@ const getAll = async (req, res) => {
 
 // GET SINGLE
 const getSingle = async (req, res) => {
+  //#swagger.tags=['contacts']
   try {
     const contactId = new ObjectId(req.params.id);
     const result = await mongodb
@@ -41,6 +43,7 @@ const getSingle = async (req, res) => {
 
 // POST
 const createContact = async (req, res) => {
+  //#swagger.tags=['contacts']
   try {
     const { firstName, lastName, email, favoriteColor, birthday } = req.body;
     
@@ -76,6 +79,7 @@ const createContact = async (req, res) => {
 
 // PUT
 const updateContact = async (req, res) => {
+  //#swagger.tags=['contacts']
   try {
     const contactId = new ObjectId(req.params.id);
     
@@ -105,6 +109,7 @@ const updateContact = async (req, res) => {
 
 // DELETE
 const deleteContact = async (req, res) => {
+  //#swagger.tags=['contacts']
   try {
     const contactId = new ObjectId(req.params.id);
     
